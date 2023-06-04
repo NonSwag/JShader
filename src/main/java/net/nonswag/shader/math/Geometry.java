@@ -1,10 +1,6 @@
 package net.nonswag.shader.math;
 
 public class Geometry {
-    public static float length(Vector2 vector) {
-        return (float) java.lang.Math.sqrt(vector.dot(vector));
-    }
-
     public static float step(float threshold, float value) {
         return value < threshold ? 0 : 1;
     }

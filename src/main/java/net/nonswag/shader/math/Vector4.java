@@ -31,4 +31,24 @@ public class Vector4 extends Vector3 {
     public float dot(Vector4 vector) {
         return x * vector.x + y * vector.y + z * vector.z + w * vector.w;
     }
+
+    @Override
+    public Vector4 cos() {
+        return new Vector4(
+                (float) Math.cos(x),
+                (float) Math.cos(y),
+                (float) Math.cos(z),
+                (float) Math.cos(w)
+        );
+    }
+
+    @Override
+    public Vector4 fract() {
+        return new Vector4(
+                x - (float) Math.floor(x),
+                y - (float) Math.floor(y),
+                z - (float) Math.floor(z),
+                w - (float) Math.floor(w)
+        );
+    }
 }

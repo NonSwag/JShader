@@ -42,4 +42,22 @@ public class Vector2 {
     public float dot(Vector2 vector) {
         return x * vector.x + y * vector.y;
     }
+
+    public float length() {
+        return (float) java.lang.Math.sqrt(dot(this));
+    }
+
+    public Vector2 cos() {
+        return new Vector2(
+                (float) Math.cos(x),
+                (float) Math.cos(y)
+        );
+    }
+
+    public Vector2 fract() {
+        return new Vector2(
+                x - (float) Math.floor(x),
+                y - (float) Math.floor(y)
+        );
+    }
 }
